@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="https://redux.js.org/img/redux.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <title>Vanilla Redux</title>
+  <style>
+    body {
+      height: 100vh;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+
+  <script type="module" src="./src/main.ts"></script>
+  <script type="module">
+    const render = () => document.querySelector('h2').innerHTML = store.getState();
+    store.subscribe(render);
+    render();
+  </script>
+</head>
+
+<body class="centered">
+  <h2></h2>
+  <div>
+    <button class="btn-large" onclick="store.dispatch({type: 'DECREMENT'})">
+      -
+    </button>
+    <button class="btn-large" onclick="store.dispatch({type: 'INCREMENT'})">
+      +
+    </button>
+  </div>
+</body>
+
+</html>

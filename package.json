@@ -1,0 +1,20 @@
+{
+  "name": "vanilla-simple-redux",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "redux": "^4.2.1"
+  }
+}
