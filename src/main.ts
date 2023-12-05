@@ -16,5 +16,5 @@ export const reducer = (state = 0, action: Action) => {
 // Create store
 const store = createStore(reducer);
 
-// For debugging
+// For debugging from the browser console.
 (window as any).store = store;
